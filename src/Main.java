@@ -73,8 +73,8 @@ public class Main {
             }
         }
 
-
-
+        //ZAD. 6
+        //bedzie zrobione w projekcie JavaTesters6
 
 
     }
