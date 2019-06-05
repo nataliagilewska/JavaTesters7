@@ -5,6 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.TreeMap;
 import java.util.Scanner;
+import java.lang.Comparable;
 
 public class Main {
 
@@ -47,7 +48,33 @@ public class Main {
         }
         System.out.println(secik2);
 
-        
+        //ZAD. 5
+        //5. Przygotuj prosty słownik dowolnego języka, zawierający kilka wpisów. Następnie w pętli pobieraj
+        //od użytkownika kolejne słowa i wyświetlaj ich tłumaczenia. Jeśli podane słowo nie znajduje się w
+        //słowniku należy wyświetlić stosowny komunikat.
+        Map<String, String> mapka2 = new TreeMap<>();
+        mapka2.put("drzewo", "tree");
+        mapka2.put("motylek", "butterfly");
+        mapka2.put("pies", "dog");
+        System.out.println(mapka2);
+        String wpisane2;
+        for (int j=1;j<=5;j++)
+        {
+            Scanner scan2 = new Scanner(System.in);
+            //String scan3=new String(scan2);
+            System.out.println("Co chcesz przetlumaczyc?");
+            wpisane2 = scan2.nextLine();
+            if (mapka2.containsKey(wpisane2))
+            {
+                System.out.println(mapka2.get(wpisane2));
+            }
+            else {
+                System.out.println("Nie ma takich danych w slowniku");
+            }
+        }
+
+
+
 
 
     }
