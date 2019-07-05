@@ -1,11 +1,6 @@
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.TreeMap;
-import java.util.Scanner;
+import java.util.*;
 import java.lang.Comparable;
+import java.util.function.Predicate;
 
 public class Main {
 
@@ -77,5 +72,37 @@ public class Main {
         //bedzie zrobione w projekcie JavaTesters6
 
 
+
+
+        //ZAJECIA O WYRAZENIACH LAMBDA
+        //poczytac o lambdach
+        Runnable runnable = new Runnable()
+        {
+            @Override
+            public void run()
+            {
+                System.out.println("runnable");
+            }
+        };  //tu musze dac srednik, bo stworzylam tu klase anonimowa
+
+        Runnable runnable1 = new CustomRunnable();
+        Runnable runnable2 = () -> System.out.println("dupa");
+        runnable.run();
+        runnable1.run();
+        runnable2.run();
+        Predicate<String> predicate = s -> s.length()>5; //import - alt +enter i wybieram import class
+        //ctrl+Q otwiera javadoc
+
+        List<String> strings = Arrays.asList("str1","str2","str3","dlugi string","dluzszy string");
+
+        strings.forEach(s->System.out.println());
+
+
+        strings.stream()
+                .filter(predicate)
+                .forEach(s->System.out.println(s));
+
+        strings.replaceAll(x->x.toUpperCase());
+        strings.forEach(System.out::println);
     }
 }
